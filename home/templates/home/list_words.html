@@ -1,0 +1,71 @@
+{% load static %}
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="author" content="templatemo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+          rel="stylesheet">
+
+    <title>Liberty Template - NFT Item Detail Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'home/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'home/assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'home/assets/css/templatemo-liberty-market.css' %}">
+    <link rel="stylesheet" href="{% static 'home/assets/css/owl.css' %}">
+    <link rel="stylesheet" href="{% static 'home/assets/css/animate.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <!--
+
+    TemplateMo 577 Liberty Market
+
+    https://templatemo.com/tm-577-liberty-market
+
+    -->
+</head>
+
+<body>
+<div class="create-nft">
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="section-heading">
+                    <div class="line-dec"></div>
+                    <h2>Sözlükte Bulunan Kelimelerin Listesi</h2>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="main-button">
+                    <a href="./index">Anasayfaya Dönmek İçin Tıklayın</a>
+                </div>
+            </div>
+            {% for word in word_list %}
+            <div class="col-lg-4">
+
+                <div class="item first-item">
+                    <h4>Word: {{ word.word }}</h4>
+                    <p>Meaning: {{ word.meaning }}</p>
+                    <p>Sample: {{ word.sample }}</p>
+                </div>
+                <hr/>
+            </div>
+            {% endfor %}
+            <h2><br> <br></h2>
+            <h2><br> <br></h2>
+            <h2><br> <br></h2>
+            <h2><br> <br></h2>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
